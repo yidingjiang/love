@@ -1,0 +1,27 @@
+{
+  "agent": {
+    "policy": {
+      "type": "vanilla",
+      "epsilon_schedule": {
+        "begin": 1.0,
+        "end": 0.01,
+        "total_steps": 500000
+      },
+      "embedder": {
+        "embed_dim": 128
+      },
+      "test_epsilon": 0,
+      "discount": 0.99
+    },
+    "buffer": {
+      "type": "vanilla",
+      "max_buffer_size": 50000
+    },
+    "learning_rate": 0.0001,
+    "sync_target_freq": 50000,
+    "min_buffer_size": 500,
+    "batch_size": 32,
+    "update_freq": 4,
+    "max_grad_norm": 10
+  }
+}
